@@ -1,0 +1,578 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046\deflangfe1046{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\fmodern\fprq1\fcharset0 Consolas;}{\f2\fmodern\fprq1\fcharset0 Courier New;}}
+{\colortbl ;\red128\green0\blue0;\red228\green0\blue0;\red59\green59\blue59;\red0\green0\blue255;\red175\green0\blue219;\red0\green15\blue128;\red163\green21\blue21;\red0\green128\blue0;\red121\green93\blue38;\red8\green133\blue87;}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}}
+{\*\generator Riched20 10.0.22621}{\*\mmathPr\mnaryLim0\mdispDef1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\nowidctlpar\s1\li1\sb77\b\f0\fs27\lang1033 Exerc\'edcio\expndtw-6  \expndtw0 1:\expndtw-7  \expndtw0 Condicional\expndtw-5  \expndtw0 IF/ELSE\expndtw-4  \expndtw-2 Simples\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\ri61\sb279\b0\fs24 Complete\expndtw-3  \expndtw0 o\expndtw-3  \expndtw0 c\'f3digo\expndtw-3  \expndtw0 para\expndtw-1  \expndtw0 verificar\expndtw-3  \expndtw0 se\expndtw-6  \expndtw0 o\expndtw-3  \expndtw0 n\'famero\expndtw-1  \expndtw0 fornecido\expndtw-3  \expndtw0 pelo\expndtw-3  \expndtw0 usu\'e1rio \'e9\expndtw-6  \expndtw0 positivo, negativo ou zero.\par
+
+\pard\nowidctlpar\sb46\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb38\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sl-244\slmult0\cf1 <title>\cf3 Verificar\expndtw-16  \expndtw-2 N\'famero\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf1 <form\expndtw-8  \cf2\expndtw0 action\cf3 =\cf4 ""\expndtw-9  \cf2\expndtw-2 method\cf3 =\cf4 "POST"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb38\cf1 <label\expndtw-10  \cf2\expndtw0 for\cf3 =\cf4 "numero"\cf1 >\cf3 Digite\expndtw-8  \expndtw0 um\expndtw-9  \expndtw-2 n\'famero:\cf1 </label>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb39\cf1 <input\expndtw-14  \cf2\expndtw0 type\cf3 =\cf4 "number"\expndtw-12  \cf2\expndtw0 id\cf3 =\cf4 "numero"\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "numero"\expndtw-9  \cf2\expndtw-2 required\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb40\cf1 <button\expndtw-8  \cf2\expndtw-2 type\cf3 =\cf4 "submit"\cf1 >\cf3 Verificar\cf1 </button>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1\expndtw-2 </form>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\li462\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf5 if\expndtw-13  \cf0\expndtw0 (\cf6 $_SERVER\cf0 [\cf7 "REQUEST_METHOD"\cf0 ]\expndtw-9  \expndtw0 ==\expndtw-10  \cf7\expndtw0 "POST"\cf0 )\expndtw-10  \{\expndtw0\par
+
+\pard\nowidctlpar\li923\sb40\cf6 $numero\expndtw-4  \cf0\expndtw0 =\expndtw-6  \cf6\expndtw-2 $_POST\cf0 [\cf7 'numero'\cf0 ];\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\li923\ri1347\sl276\slmult1\tx2540\cf8 //\expndtw-5  \expndtw0 Verifique\expndtw-3  \expndtw0 se\expndtw-5  \expndtw0 o\expndtw-5  \expndtw0 n\'famero\expndtw-5  \expndtw0\'e9\expndtw-3  \expndtw0 positivo,\expndtw-5  \expndtw0 negativo\expndtw-5  \expndtw0 ou\expndtw-5  \expndtw0 zero. \cf5 if \cf0 (\ul\f0\tab\ulnone\f1 ) \{\par
+
+\pard\nowidctlpar\li1384\sb1\cf9 echo\expndtw-3  \cf7\expndtw0 "O\expndtw-3  \expndtw0 n\'famero\expndtw-3  \expndtw0\'e9\expndtw-3  \expndtw-2 positivo!"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb37\tx3232\}\expndtw-3  \cf5\expndtw0 elseif\expndtw-3  \cf0\expndtw-10 (\expndtw0\ul\f0\tab\ulnone\f1 )\expndtw-2  \expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb40\cf9 echo\expndtw-3  \cf7\expndtw0 "O\expndtw-3  \expndtw0 n\'famero\expndtw-3  \expndtw0\'e9\expndtw-3  \expndtw-2 negativo!"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb40\}\expndtw-2  \cf5\expndtw0 else\expndtw-1  \cf0\expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb39\cf9 echo\expndtw-3  \cf7\expndtw0 "O\expndtw-3  \expndtw0 n\'famero\expndtw-3  \expndtw0\'e9\expndtw-3  \expndtw-2 zero!"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb38\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li461\sb39\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb37\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb241\fs27\par
+
+\pard\nowidctlpar\li1\b\f0 Exerc\'edcio\expndtw-7  \expndtw0 2:\expndtw-4  \expndtw0 Estrutura\expndtw-5  \expndtw-2\f2\fs20 elseif\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\ri61\sb280\b0\f1\fs24 Complete\expndtw-2  \expndtw0 o\expndtw-2  \expndtw0 c\'f3digo\expndtw-2  \expndtw0 abaixo\expndtw-2  \expndtw0 para\expndtw-5  \expndtw0 determinar\expndtw-6  \expndtw0 se\expndtw-2  \expndtw0 a\expndtw-5  \expndtw0 pessoa\expndtw-5  \expndtw0\'e9\expndtw-2  \expndtw0 uma\expndtw-2  \expndtw0 crian\'e7a, adolescente, adulto ou idoso, com base na idade.\par
+
+\pard\nowidctlpar\sb42\f0\par
+
+\pard\nowidctlpar\li1\sb1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb37\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\sl276\slmult1\par
+
+\pard\nowidctlpar\li462\sb37\cf1 <title>\cf3 Verificar\expndtw-16  \expndtw-2 Idade\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb38\cf1 <form\expndtw-8  \cf2\expndtw0 action\cf3 =\cf4 ""\expndtw-9  \cf2\expndtw-2 method\cf3 =\cf4 "POST"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb39\cf1 <label\expndtw-11  \cf2\expndtw0 for\cf3 =\cf4 "idade"\cf1 >\cf3 Digite\expndtw-8  \expndtw0 sua\expndtw-10  \expndtw-2 idade:\cf1 </label>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb40\cf1 <input\expndtw-14  \cf2\expndtw0 type\cf3 =\cf4 "number"\expndtw-11  \cf2\expndtw0 id\cf3 =\cf4 "idade"\expndtw-11  \cf2\expndtw0 name\cf3 =\cf4 "idade"\expndtw-10  \cf2\expndtw-2 required\cf1 >\cf0\expndtw0\par
+\cf1 <button\expndtw-8  \cf2\expndtw-2 type\cf3 =\cf4 "submit"\cf1 >\cf3 Verificar\cf1 </button>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb37\cf1\expndtw-2 </form>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb79\par
+
+\pard\nowidctlpar\li462\sb1\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf5 if\expndtw-13  \cf0\expndtw0 (\cf6 $_SERVER\cf0 [\cf7 "REQUEST_METHOD"\cf0 ]\expndtw-9  \expndtw0 ==\expndtw-10  \cf7\expndtw0 "POST"\cf0 )\expndtw-10  \{\expndtw0\par
+
+\pard\nowidctlpar\li923\sb38\cf6 $idade\expndtw-4  \cf0\expndtw0 =\expndtw-4  \cf6\expndtw-2 $_POST\cf0 [\cf7 'idade'\cf0 ];\expndtw0\par
+
+\pard\nowidctlpar\sb79\par
+
+\pard\nowidctlpar\li923\tx2540\cf5 if\expndtw-2  \cf0\expndtw-10 (\expndtw0\ul\f0\tab\ulnone\f1 )\expndtw-2  \expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb40\cf9 echo\expndtw-4  \cf7\expndtw0 "Voc\'ea\expndtw-4  \expndtw0\'e9\expndtw-2  \expndtw0 uma\expndtw-3  \expndtw-2 crian\'e7a."\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb37\tx3232\}\expndtw-3  \cf5\expndtw0 elseif\expndtw-3  \cf0\expndtw-10 (\expndtw0\ul\f0\tab\ulnone\f1 )\expndtw-2  \expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb40\cf9 echo\expndtw-4  \cf7\expndtw0 "Voc\'ea\expndtw-4  \expndtw0\'e9\expndtw-2  \expndtw0 um\expndtw-3  \expndtw-2 adolescente."\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb39\tx3232\}\expndtw-3  \cf5\expndtw0 elseif\expndtw-3  \cf0\expndtw-10 (\expndtw0\ul\f0\tab\ulnone\f1 )\expndtw-2  \expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb40\cf9 echo\expndtw-4  \cf7\expndtw0 "Voc\'ea\expndtw-4  \expndtw0\'e9\expndtw-2  \expndtw0 um\expndtw-3  \expndtw-2 adulto."\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb37\}\expndtw-2  \cf5\expndtw0 else\expndtw-1  \cf0\expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb40\cf9 echo\expndtw-4  \cf7\expndtw0 "Voc\'ea\expndtw-4  \expndtw0\'e9\expndtw-2  \expndtw0 um\expndtw-3  \expndtw-2 idoso."\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb40\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li461\sb40\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb37\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\fs27\par
+
+\pard\nowidctlpar\sb150\par
+
+\pard\nowidctlpar\li1\b\f0 Exerc\'edcio\expndtw-7  \expndtw0 3:\expndtw-4  \expndtw0 Estrutura\expndtw-5  \expndtw-2\f2\fs20 switch\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\sb280\b0\f1\fs24 Complete\expndtw-3  \expndtw0 o\expndtw-3  \expndtw0 c\'f3digo\expndtw-3  \expndtw0 para\expndtw-1  \expndtw0 determinar\expndtw-7  \expndtw0 o\expndtw-3  \expndtw0 dia\expndtw-2  \expndtw0 da\expndtw-6  \expndtw0 semana\expndtw-3  \expndtw0 com\expndtw-3  \expndtw0 base\expndtw-3  \expndtw0 no\expndtw-3  \expndtw0 n\'famero\expndtw-3  \expndtw0 fornecido\expndtw-3  \expndtw0 (1 para domingo, 2 para segunda, etc.).\par
+
+\pard\nowidctlpar\sb43\f0\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb37\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\cf1 <title>\cf3 Dia\expndtw-7  \expndtw0 da\expndtw-7  \expndtw-2 Semana\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb38\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <form\expndtw-8  \cf2\expndtw0 action\cf3 =\cf4 ""\expndtw-9  \cf2\expndtw-2 method\cf3 =\cf4 "POST"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb40\cf1 <label\expndtw-10  \cf2\expndtw0 for\cf3 =\cf4 "dia"\cf1 >\cf3 Digite\expndtw-8  \expndtw0 um\expndtw-4  \expndtw0 n\'famero\expndtw-4  \expndtw0 (1\expndtw-8  \expndtw0 a\expndtw-7  \expndtw-2 7):\cf1 </label>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb37\cf1 <input\expndtw-13  \cf2\expndtw0 type\cf3 =\cf4 "number"\expndtw-10  \cf2\expndtw0 id\cf3 =\cf4 "dia"\expndtw-9  \cf2\expndtw0 name\cf3 =\cf4 "dia"\expndtw-9  \cf2\expndtw-2 required\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li923\sb40\cf1 <button\expndtw-8  \cf2\expndtw-2 type\cf3 =\cf4 "submit"\cf1 >\cf3 Verificar\cf1 </button>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1\expndtw-2 </form>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\par
+
+\pard\nowidctlpar\li462\sb37\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf5 if\expndtw-13  \cf0\expndtw0 (\cf6 $_SERVER\cf0 [\cf7 "REQUEST_METHOD"\cf0 ]\expndtw-9  \expndtw0 ==\expndtw-10  \cf7\expndtw0 "POST"\cf0 )\expndtw-10  \{\expndtw0\par
+
+\pard\nowidctlpar\li923\sb39\cf6 $dia\expndtw-1  \cf0\expndtw0 =\expndtw-3  \cf6\expndtw-2 $_POST\cf0 [\cf7 'dia'\cf0 ];\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\fi-461\li1384\ri5156\sl276\slmult1\tx3001\cf5 switch \cf0 (\ul\f0\tab\ulnone\f1 )\expndtw-29  \expndtw0\{ \cf5 case \cf10 1\cf0 :\par
+
+\pard\nowidctlpar\li1847\ri4299\sb1\sl276\slmult1\cf9 echo\expndtw-29  \cf7\expndtw0 "Domingo"\cf0 ; \cf5\expndtw-2 break\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb3\cf5 case\expndtw-3  \cf10\expndtw-5 2\cf0 :\expndtw0\par
+
+\pard\nowidctlpar\li1847\ri3606\sb40\sl276\slmult1\cf9 echo\expndtw-29  \cf7\expndtw0 "Segunda-feira"\cf0 ; \cf5\expndtw-2 break\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li1384\sl-244\slmult0\cf5 case\expndtw-3  \cf10\expndtw-5 3\cf0 :\expndtw0\par
+
+\pard\nowidctlpar\li1847\ri4299\sb40\sl276\slmult1\cf9 echo\expndtw-29  \cf7\expndtw0 "Ter\'e7a-feira"\cf0 ; \cf5\expndtw-2 break\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li1384\ri1657\sb1\sl276\slmult1\cf8 //\expndtw-6  \expndtw0 Continue\expndtw-6  \expndtw0 com\expndtw-6  \expndtw0 os\expndtw-6  \expndtw0 outros\expndtw-6  \expndtw0 dias\expndtw-2  \expndtw0 da\expndtw-6  \expndtw0 semana \cf5\expndtw-2 default\cf0 :\expndtw0\par
+
+\pard\nowidctlpar\li1847\ri3606\sb3\sl276\slmult1\cf9 echo\expndtw-17  \cf7\expndtw0 "N\'famero\expndtw-18  \expndtw0 inv\'e1lido."\cf0 ; \cf5\expndtw-2 break\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb1\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li461\sb37\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb240\fs27\par
+
+\pard\nowidctlpar\li1\sb1\b\f0 Exerc\'edcio\expndtw-5  \expndtw0 4:\expndtw-3  \expndtw0 La\'e7o\expndtw-4  \expndtw-2\f2\fs20 while\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\sb277\b0\f1\fs24 Complete\expndtw-1  \expndtw0 o\expndtw-1  \expndtw0 c\'f3digo para\expndtw1  \expndtw0 exibir\expndtw-1  \expndtw0 os n\'fameros\expndtw-1  \expndtw0 de\expndtw-1  \expndtw0 1 a\expndtw1  \expndtw0 10\expndtw-1  \expndtw0 utilizando o\expndtw-1  \expndtw0 la\'e7o\expndtw-2  \f2\fs20 while\f1\fs24 .\expndtw0\par
+
+\pard\nowidctlpar\sb44\f0\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb38\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sl-244\slmult0\cf1 <title>\cf3 La\'e7o\expndtw-12  \expndtw-2 While\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <h2>\cf3 N\'fameros\expndtw-4  \expndtw0 de\expndtw-6  \expndtw0 1\expndtw-4  \expndtw0 a\expndtw-3  \expndtw-2 10:\cf1 </h2>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\li462\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf6 $i\expndtw-2  \cf0\expndtw0 =\expndtw-3  \cf10\expndtw-5 1\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\fi-461\li923\ri5617\sl276\slmult1\tx2425\cf5 while \cf0 (\ul\f0\tab\ulnone\f1 ) \{ \cf9 echo\expndtw-10  \cf6\expndtw0 $i\expndtw-12  \cf0\expndtw0 .\expndtw-13  \cf7\expndtw0 "<br>"\cf0 ;\par
+
+\pard\nowidctlpar\li922\sb1\tx2077\ul\f0\tab\expndtw-10\ulnone\f1 ;\expndtw0\par
+
+\pard\nowidctlpar\li461\sb39\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb38\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\par
+
+\pard\nowidctlpar\li1\sb37\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\fs27\par
+
+\pard\nowidctlpar\sb152\par
+
+\pard\nowidctlpar\s1\li1\b Exerc\'edcio\expndtw-5  \expndtw0 5:\expndtw-3  \expndtw0 La\'e7o\expndtw-4  \expndtw-5\f2\fs20 for\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\sb278\b0\f1\fs24 Complete\expndtw-1  \expndtw0 o c\'f3digo\expndtw-1  \expndtw0 para\expndtw2  \expndtw0 exibir\expndtw-1  \expndtw0 os n\'fameros\expndtw-1  \expndtw0 pares\expndtw2  \expndtw0 de\expndtw-4  \expndtw0 1 a\expndtw-1  \expndtw0 20 utilizando\expndtw-1  \expndtw0 o la\'e7o \expndtw-4\f2\fs20 for\f1\fs24 .\expndtw0\par
+
+\pard\nowidctlpar\sb44\f0\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb38\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb3\cf1 <title>\cf3 La\'e7o\expndtw-12  \expndtw-2 For\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb38\cf1 <h2>\cf3 N\'fameros\expndtw-4  \expndtw0 pares\expndtw-4  \expndtw0 de\expndtw-5  \expndtw0 1\expndtw-6  \expndtw0 a\expndtw-5  \expndtw-2 20:\cf1 </h2>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb79\par
+
+\pard\nowidctlpar\li462\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi-461\li923\ri3192\sb40\sl276\slmult1\tx2193\tx2540\tx3578\tx4965\cf5 for \cf0 (\ul\f0\tab\ulnone\f1 ; \ul\f0\tab\tab\ulnone\f1 ; \ul\f0\tab\ulnone\f1 )\expndtw-29  \expndtw0\{ \cf5 if \cf0 (\ul\f0\tab\tab\ulnone\f1 ) \{\par
+
+\pard\nowidctlpar\li1384\sb3\cf9 echo\expndtw-3  \cf6\expndtw0 $i\expndtw-2  \cf0\expndtw0 . \cf7\expndtw-2 "<br>"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb40\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li461\sb40\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb37\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb241\fs27\par
+
+\pard\nowidctlpar\li1\b\f0 Exerc\'edcio\expndtw-5  \expndtw0 6:\expndtw-3  \expndtw0 La\'e7o\expndtw-4  \expndtw-2\f2\fs20 foreach\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\sb277\b0\f1\fs24 Complete o c\'f3digo para\expndtw2  \expndtw0 exibir o nome e\expndtw-3  \expndtw0 idade de cada\expndtw-3  \expndtw0 pessoa em\expndtw-2  \expndtw0 um array\expndtw1  \expndtw-2 associativo.\expndtw0\par
+
+\pard\nowidctlpar\sb46\f0\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb38\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb39\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sl-244\slmult0\cf1 <title>\cf3 Array\expndtw-15  \expndtw-2 Associativo\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf1 <h2>\cf3 Lista\expndtw-6  \expndtw0 de\expndtw-7  \expndtw-2 Pessoas:\cf1 </h2>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\li462\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf6 $pessoas\expndtw-4  \cf0\expndtw0 =\expndtw-6  \expndtw-10 [\expndtw0\par
+
+\pard\nowidctlpar\li923\sb40\cf7 "Ana"\expndtw-3  \cf0\expndtw0 =>\expndtw-5  \cf10 25\cf0 ,\expndtw0\par
+
+\pard\nowidctlpar\li923\sb37\cf7 "Carlos"\expndtw-6  \cf0\expndtw0 =>\expndtw-6  \cf10\expndtw-5 30\cf0 ,\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\par
+
+\pard\nowidctlpar\li923\sb37\cf7 "Pedro"\expndtw-6  \cf0\expndtw0 =>\expndtw-5  \cf10 40\cf0\expndtw0\par
+
+\pard\nowidctlpar\li461\sb40\expndtw-5 ];\expndtw0\par
+
+\pard\nowidctlpar\sb76\par
+
+\pard\nowidctlpar\li462\sb1\tx2656\cf5 foreach\expndtw-9  \cf0\expndtw-10 (\expndtw0\ul\f0\tab\ulnone\f1 )\expndtw-2  \expndtw-12\{\expndtw0\par
+
+\pard\nowidctlpar\li923\sb39\tx3973\tx7091\cf9 echo \cf7 "Nome: " \cf0 . \ul\f0\tab\expndtw28\ulnone  \expndtw0\f1 . \cf7 ", Idade: " \cf0 . \ul\f0\tab\expndtw20\ulnone  \expndtw0\f1 . \cf7 "<br>"\cf0 ;\par
+
+\pard\nowidctlpar\li461\sb40\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb37\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb240\fs27\par
+
+\pard\nowidctlpar\s1\li1\b Exerc\'edcio\expndtw-9  \expndtw0 7:\expndtw-7  \expndtw0 Comando\expndtw-3  \expndtw-4\f2\fs20 break\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\ri61\sb280\b0\f1\fs24 Complete\expndtw-3  \expndtw0 o\expndtw-3  \expndtw0 c\'f3digo\expndtw-3  \expndtw0 para\expndtw-3  \expndtw0 interromper\expndtw-1  \expndtw0 a\expndtw-5  \expndtw0 execu\'e7\'e3o\expndtw-5  \expndtw0 assim\expndtw-3  \expndtw0 que\expndtw-3  \expndtw0 encontrar\expndtw-5  \expndtw0 o\expndtw-3  \expndtw0 n\'famero\expndtw-3  \expndtw0 5\expndtw-3  \expndtw0 em uma lista de n\'fameros.\par
+
+\pard\nowidctlpar\sb43\f0\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb37\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sl-244\slmult0\cf1 <title>\cf3 Comando\expndtw-16  \expndtw-2 Break\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <h2>\cf3 N\'fameros\expndtw-4  \expndtw0 de\expndtw-6  \expndtw0 1\expndtw-4  \expndtw0 a\expndtw-4  \expndtw0 10\expndtw-6  \expndtw0 (parando\expndtw-4  \expndtw0 no\expndtw-5  \expndtw-2 5):\cf1 </h2>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\li462\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf6 $numeros\expndtw-1  \cf0\expndtw0 =\expndtw-4  \expndtw0 [\cf10 1\cf0 ,\expndtw-4  \cf10\expndtw0 2\cf0 ,\expndtw-1  \cf10\expndtw0 3\cf0 ,\expndtw-4  \cf10\expndtw0 4\cf0 ,\expndtw-3  \cf10\expndtw0 5\cf0 ,\expndtw-4  \cf10\expndtw0 6\cf0 ,\expndtw-1  \cf10\expndtw0 7\cf0 ,\expndtw-4  \cf10\expndtw0 8\cf0 ,\expndtw-4  \cf10\expndtw0 9\cf0 , \cf10\expndtw-4 10\cf0 ];\expndtw0\par
+
+\pard\nowidctlpar\sb76\par
+
+\pard\nowidctlpar\fi-461\li923\ri4463\sb1\sl276\slmult1\tx2540\cf5 foreach\expndtw-9  \cf0\expndtw0 (\cf6 $numeros\expndtw-8  \cf0\expndtw0 as\expndtw-10  \cf6\expndtw0 $numero\cf0 )\expndtw-9  \expndtw0\{ \cf5 if \cf0 (\ul\f0\tab\ulnone\f1 ) \{\par
+
+\pard\nowidctlpar\li1384\cf9 echo\expndtw-8  \cf7\expndtw0 "N\'famero\expndtw-4  \expndtw0 encontrado:\expndtw-6  \expndtw0 "\expndtw-4  \cf0\expndtw0 .\expndtw-7  \cf6\expndtw0 $numero\expndtw-4  \cf0\expndtw0 .\expndtw-6  \cf7\expndtw-2 "<br>"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb40\tx2539\ul\f0\tab\expndtw-10\ulnone\f1 ;\expndtw0\par
+
+\pard\nowidctlpar\par
+\par
+
+\pard\nowidctlpar\sb117\par
+
+\pard\nowidctlpar\li461\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb37\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb37\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li2\sb40\cf9 echo\expndtw-4  \cf6\expndtw0 $numero\expndtw-3  \cf0\expndtw0 .\expndtw-5  \cf7\expndtw-2 "<br>"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\par
+
+\pard\nowidctlpar\fs27\par
+
+\pard\nowidctlpar\sb152\par
+
+\pard\nowidctlpar\li1\b\f0 Exerc\'edcio\expndtw-7  \expndtw0 8:\expndtw-7  \expndtw0 Comando\expndtw-3  \expndtw-2\f2\fs20 continue\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\sb278\b0\f1\fs24 Complete\expndtw-3  \expndtw0 o\expndtw-3  \expndtw0 c\'f3digo\expndtw-3  \expndtw0 para\expndtw-1  \expndtw0 pular\expndtw-3  \expndtw0 n\'fameros\expndtw-3  \expndtw0\'edmpares\expndtw-3  \expndtw0 e\expndtw-3  \expndtw0 exibir\expndtw-3  \expndtw0 apenas\expndtw-3  \expndtw0 os\expndtw-3  \expndtw0 n\'fameros\expndtw-1  \expndtw0 pares\expndtw-3  \expndtw0 de\expndtw-3  \expndtw0 1\expndtw-1  \expndtw0 a \expndtw-4 10.\expndtw0\par
+
+\pard\nowidctlpar\sb42\f0\par
+
+\pard\nowidctlpar\li1\sb1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\par
+
+\pard\nowidctlpar\li1\sb37\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb38\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\cf1 <title>\cf3 Comando\expndtw-16  \expndtw-2 Continue\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb37\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <h2>\cf3 N\'fameros\expndtw-4  \expndtw0 pares\expndtw-4  \expndtw0 de\expndtw-5  \expndtw0 1\expndtw-6  \expndtw0 a\expndtw-5  \expndtw-2 10:\cf1 </h2>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb79\par
+
+\pard\nowidctlpar\li462\sb1\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi-461\li923\ri4580\sb37\sl276\slmult1\tx2540\cf5 for\expndtw-4  \cf0\expndtw0 (\cf6 $i\expndtw-5  \cf0\expndtw0 =\expndtw-4  \cf10\expndtw0 1\cf0 ;\expndtw-5  \cf6\expndtw0 $i\expndtw-5  \cf0\expndtw0 <=\expndtw-4  \cf10\expndtw0 10\cf0 ;\expndtw-5  \cf6\expndtw0 $i\cf0 ++)\expndtw-5  \expndtw0\{ \cf5 if \cf0 (\ul\f0\tab\ulnone\f1 ) \{\par
+
+\pard\nowidctlpar\li1384\sb1\tx2539\ul\f0\tab\expndtw-10\ulnone\f1 ;\expndtw0\par
+
+\pard\nowidctlpar\par
+\par
+
+\pard\nowidctlpar\sb116\par
+
+\pard\nowidctlpar\li461\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb37\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li2\sb38\cf9 echo\expndtw-2  \cf6\expndtw0 $i\expndtw-3  \cf0\expndtw0 .\expndtw-3  \cf7\expndtw-2 "<br>"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\par
+
+\pard\nowidctlpar\fs27\par
+
+\pard\nowidctlpar\sb152\par
+
+\pard\nowidctlpar\li1\sb1\b\f0 Exerc\'edcio\expndtw-5  \expndtw0 9:\expndtw-3  \expndtw0 La\'e7o\expndtw-4  \expndtw-2\f2\fs20 do...while\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\sb277\b0\f1\fs24 Complete\expndtw-2  \expndtw0 o\expndtw-2  \expndtw0 c\'f3digo\expndtw-2  \expndtw0 para\expndtw-1  \expndtw0 exibir\expndtw-2  \expndtw0 o\expndtw-2  \expndtw0 valor\expndtw-2  \expndtw0 de\expndtw-2  \expndtw0 uma\expndtw-2  \expndtw0 vari\'e1vel\expndtw-4  \expndtw0 at\'e9\expndtw-2  \expndtw0 que\expndtw-2  \expndtw0 ela\expndtw-2  \expndtw0 seja\expndtw-2  \expndtw0 maior\expndtw-2  \expndtw0 ou\expndtw-2  \expndtw0 igual\expndtw-4  \expndtw0 a 10, utilizando o la\'e7o \f2\fs20 do...while\f1\fs24 .\par
+
+\pard\nowidctlpar\sb44\f0\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb38\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb39\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sl-244\slmult0\cf1 <title>\cf3 La\'e7o\expndtw-12  \expndtw-2 Do...While\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <h2>\cf3 Exibindo\expndtw-9  \expndtw0 valores\expndtw-7  \expndtw0 at\'e9\expndtw-7  \expndtw0 que\expndtw-7  \expndtw0 sejam\expndtw-5  \expndtw0 maiores\expndtw-7  \expndtw0 que\expndtw-6  \expndtw-2 10:\cf1 </h2>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\li462\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf6 $x\expndtw-2  \cf0\expndtw0 =\expndtw-3  \cf10\expndtw-5 1\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\li462\cf5 do\expndtw-2  \cf0\expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li923\sb40\cf9 echo\expndtw-2  \cf7\expndtw0 "Valor\expndtw-3  \expndtw0 de\expndtw-3  \expndtw0 x:\expndtw-3  \expndtw0 "\expndtw-2  \cf0\expndtw0 .\expndtw-4  \cf6\expndtw0 $x\expndtw-3  \cf0\expndtw0 .\expndtw-1  \cf7\expndtw-2 "<br>"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb39\tx2077\ul\f0\tab\expndtw-10\ulnone\f1 ;\expndtw0\par
+
+\pard\nowidctlpar\li461\sb40\tx2656\}\expndtw-4  \cf5\expndtw0 while\expndtw-3  \cf0\expndtw-10 (\expndtw0\ul\f0\tab\expndtw-5\ulnone\f1 );\expndtw0\par
+
+\pard\nowidctlpar\li462\sb37\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </body>\cf0\expndtw0\par
+\cf1\expndtw-2 </html>\cf0\expndtw0\par
+\par
+
+\pard\nowidctlpar\sb38\fs27\par
+
+\pard\nowidctlpar\s1\li1\b Exerc\'edcio\expndtw-10  \expndtw0 10:\expndtw-5  \expndtw0 Combina\'e7\'e3o\expndtw-4  \expndtw0 de\expndtw-7  \expndtw0 Condicionais\expndtw-4  \expndtw0 e\expndtw-4  \expndtw-2 La\'e7os\expndtw0\par
+
+\pard\nowidctlpar\s2\li1\sb279\b0\fs24 Complete\expndtw-2  \expndtw0 o\expndtw-2  \expndtw0 c\'f3digo\expndtw-2  \expndtw0 para percorrer\expndtw-5  \expndtw0 uma\expndtw-2  \expndtw0 lista\expndtw-1  \expndtw0 de\expndtw-5  \expndtw0 n\'fameros\expndtw-2  \expndtw0 e\expndtw-2  \expndtw0 exibir\expndtw-2  \expndtw0 se\expndtw-2  \expndtw0 cada\expndtw-5  \expndtw0 n\'famero\expndtw-2  \expndtw0\'e9\expndtw-5  \expndtw0\'edmpar ou par.\par
+
+\pard\nowidctlpar\sb45\f0\par
+
+\pard\nowidctlpar\li1\cf1\f1\fs21 <!DOCTYPE\expndtw-13  \cf2\expndtw-2 html\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb38\cf1 <html\expndtw-18  \cf2\expndtw0 lang\cf3 =\cf4 "pt-\expndtw-4 BR"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf1 <meta\expndtw-19  \cf2\expndtw0 charset\cf3 =\cf4 "UTF-\expndtw-5 8"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\fi460\li1\ri61\sb40\sl276\slmult1\cf1 <meta\expndtw-12  \cf2\expndtw0 name\cf3 =\cf4 "viewport"\expndtw-12  \cf2\expndtw0 content\cf3 =\cf4 "width=device-width,\expndtw-11  \expndtw0 initial- \expndtw-2 scale=1.0"\cf1 >\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb3\cf1 <title>\cf3 Verificar\expndtw-8  \expndtw0\'cdmpar\expndtw-9  \expndtw0 ou\expndtw-9  \expndtw-2 Par\cf1 </title>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </head>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb39\cf1\expndtw-2 <body>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb38\cf1 <h2>\cf3 Verificar\expndtw-9  \expndtw0 se\expndtw-5  \expndtw0 os\expndtw-7  \expndtw0 n\'fameros\expndtw-5  \expndtw0 s\'e3o\expndtw-7  \expndtw0\'edmpares\expndtw-5  \expndtw0 ou\expndtw-6  \expndtw-2 pares:\cf1 </h2>\cf0\expndtw0\par
+
+\pard\nowidctlpar\sb79\par
+
+\pard\nowidctlpar\li462\cf1\expndtw-2 <?php\cf0\expndtw0\par
+
+\pard\nowidctlpar\li462\sb40\cf6 $numeros\expndtw-2  \cf0\expndtw0 =\expndtw-4  \expndtw0 [\cf10 10\cf0 ,\expndtw-5  \cf10\expndtw0 15\cf0 ,\expndtw-4  \cf10\expndtw0 20\cf0 ,\expndtw-5  \cf10\expndtw0 25\cf0 ,\expndtw-4  \cf10\expndtw0 30\cf0 ,\expndtw-4  \cf10 35\cf0 ];\expndtw0\par
+
+\pard\nowidctlpar\sb77\par
+
+\pard\nowidctlpar\fi-461\li923\ri4463\sl276\slmult1\tx2540\cf5 foreach\expndtw-9  \cf0\expndtw0 (\cf6 $numeros\expndtw-8  \cf0\expndtw0 as\expndtw-10  \cf6\expndtw0 $numero\cf0 )\expndtw-9  \expndtw0\{ \cf5 if \cf0 (\ul\f0\tab\ulnone\f1 ) \{\par
+
+\pard\nowidctlpar\li1384\sb1\cf9 echo\expndtw-4  \cf6\expndtw0 $numero\expndtw-1  \cf0\expndtw0 .\expndtw-5  \cf7\expndtw0 "\expndtw-3  \expndtw0\'e9\expndtw-3  \expndtw-2 par.<br>"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb37\}\expndtw-2  \cf5\expndtw0 else\expndtw-1  \cf0\expndtw-10\{\expndtw0\par
+
+\pard\nowidctlpar\li1384\sb40\cf9 echo\expndtw-4  \cf6\expndtw0 $numero\expndtw-1  \cf0\expndtw0 .\expndtw-5  \cf7\expndtw0 "\expndtw-3  \expndtw0\'e9\expndtw-3  \expndtw-2\'edmpar.<br>"\cf0 ;\expndtw0\par
+
+\pard\nowidctlpar\li922\sb39\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li461\sb40\expndtw-10\}\expndtw0\par
+
+\pard\nowidctlpar\li462\sb37\cf1\expndtw-5 ?>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb40\cf1\expndtw-2 </body>\cf0\expndtw0\par
+\cf1\expndtw-2 </html>\cf0\expndtw0\par
+
+\pard\nowidctlpar\li1\sb278\f0\fs24 Esses\expndtw-3  \expndtw0 exerc\'edcios\expndtw-2  \expndtw0 agora\expndtw-3  \expndtw0 est\'e3o\expndtw-3  \expndtw0 formatados\expndtw-3  \expndtw0 com\expndtw-2  \expndtw0 HTML\expndtw-3  \expndtw0 b\'e1sico\expndtw-3  \expndtw0 para\expndtw-6  \expndtw0 facilitar\expndtw-3  \expndtw0 a\expndtw-3  \expndtw0 execu\'e7\'e3o direta em ambientes de desenvolvimento como o XAMPP.\par
+}
+ 
